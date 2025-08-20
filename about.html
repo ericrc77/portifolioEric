@@ -7,16 +7,20 @@
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
+    <a href="#principal" class="skip-link">Ir para o conteúdo principal</a>
     <header class="cabecalho">
         <nav class="cabecalho__menu" aria-label="Menu principal">
             <a class="cabecalho__menu__link" href="index.html">Home</a>
             <a class="cabecalho__menu__link" href="about.html" aria-current="page">Sobre mim</a>
         </nav>
     </header>
-    <main class="about__container">
+    <main id="principal" class="about__container">
         <div class="about__hero">
             <div class="about__intro">
-                <img src="assets/perfil.jpeg" alt="Foto de perfil de Eric Campos" class="about__foto">
+                <img src="assets/perfil.jpeg" 
+                    srcset="assets/perfil.jpeg 1x, assets/perfil.jpeg 2x" 
+                        alt="Foto de perfil de Eric Campos" class="about__foto" width="180" height="180" loading="lazy"
+                    onerror="this.onerror=null;this.src='perfil.jpeg'; if(!this.complete||this.naturalWidth===0){ this.src='./assets/perfil.jpeg'; }">
                 <div class="about__apresentacao">
                     <h1 class="about__nome">Eric Rodrigues Campos</h1>
                     <p class="about__cargo">Desenvolvedor Full-Stack | Especialista em PHP</p>
@@ -153,14 +157,13 @@
             </section>
         </div>
 
-        <footer class="about__footer">
-            <p class="about__agradecimento">
-                Agradeço sua visita ao meu portfólio! Espero que possamos colaborar em projetos incríveis.
-                <br><br>
-                <strong>Eric Rodrigues Campos</strong><br>
-                <em>Desenvolvedor Full-Stack</em>
-            </p>
-        </footer>
+    </main>
+    <footer class="about__footer">
+        <p class="about__agradecimento">
+            Eric Campos - Desenvolvedor Full-Stack
+        </p>
+    </footer>
+    <script src="scripts.js"></script>
     </main>
     <script src="scripts.js"></script>
 </body>

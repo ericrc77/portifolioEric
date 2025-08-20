@@ -17,6 +17,32 @@
 }
 
 /* === RESET E CONFIGURAÇÕES GLOBAIS === */
+/* === LINK DE ACESSIBILIDADE === */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 9999;
+    background: var(--cor-terciaria);
+    color: var(--cor-primaria);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-family: var(--fonte-primaria);
+    transition: left 0.3s;
+}
+
+.skip-link:focus {
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    outline: 3px solid var(--cor-secundaria);
+    box-shadow: 0 2px 12px rgba(34, 212, 253, 0.5);
+}
 * {
     margin: 0;
     padding: 0;
@@ -141,6 +167,11 @@ main {
     font-family: var(--fonte-primaria);
     letter-spacing: 0.03em;
     line-height: 1.2;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 100%;
+}
 }
 
 .home__texto {
